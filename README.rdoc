@@ -1,0 +1,11 @@
+= New Thor Task
+
+A Thor based generator to rapidly create a new Thor Task project.
+
+ * /templates   : Template dir
+ 
+== TODO 
+
+== Community
+
+Suggestions for improvement are welcome!

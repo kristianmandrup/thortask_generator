@@ -1,0 +1,7 @@
+= <%= "#{app_name.camelize}" %>
+
+A Thor task to ... 
+
+== Copyright
+
+MIT License
