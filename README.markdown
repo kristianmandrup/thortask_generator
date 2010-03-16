@@ -1,8 +1,8 @@
-h1. Thor Task Skeleton
+# Thor Task Skeleton ##
 
 A Thor based generator to rapidly create a new Thor Task project.
 
-h2. Installation
+## Installation ##
 
 Currently requires installation of my fork of the thor gem (0.13.5), or any fork building on this fork.
 
@@ -22,7 +22,7 @@ $ cd thortask_generator
 $ thor install lib/thortask.thor
 </pre>
 
-h2. Usage
+## Usage ##
 
 <pre>  
 $ thor thortask mytask
@@ -30,7 +30,7 @@ $ thor thortask mytask
   
 Generates skeleton structure for new thor task project
 
-h3. options
+### options ##
 
 * --namespace : string indicating the namespace to place the tasks in 
   
@@ -48,7 +48,7 @@ $ thor thortask good --namespace project --skip-rspec --skip_cucumber
   
 Creates task project:good without any tests generated
  
-h2. TODO 
+## TODO ##
 
 Allow templates to be deployed within `~/.thor` in a `templates` dir for each task directory.
 
@@ -64,6 +64,6 @@ Example deployment structure:
     - main.thor
 </pre>
 
-h2. Community
+## Community ##
 
 Suggestions for improvement are welcome!
