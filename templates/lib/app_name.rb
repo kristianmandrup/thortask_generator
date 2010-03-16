@@ -8,8 +8,10 @@ class <%= "#{app_name.camelize}" %> < Thor::Group
   argument :name
   class_option :my_option, :type => :boolean, :default => true
 
-  def self.source_root
-    File.join(File.dirname(__FILE__), 'templates')
+  def self.source_root                   
+    # use line below when deploying the task
+    # template_path(__FILE__)        
+    local_template_path(__FILE__) # tries ROOT/templates and then ROOT/lib/templates        
   end
 
   def create_root
