@@ -5,8 +5,11 @@ class <%= "#{app_name.camelize}" %> < Thor::Group
   include Thor::Actions
 
   # Define arguments and options
-  argument :name
-  class_option :my_option, :type => :boolean, :default => true
+  argument :name 
+  # argument :my_arg_name, :type (:string, :hash, :array, :numeric), :default, :required, :optional, :desc, :banner
+
+  class_option :my_option, :type => :boolean, :default => true 
+  # class_option :my_other_option, :type (:string, :hash, :array, :numeric or :boolean), :default, :required => false, :group, :aliases => '-p', :desc, :banner  
 
   def self.source_root                   
     # use line below when deploying the task
