@@ -1,7 +1,7 @@
 require 'thor/group'
 
 <%= "module #{options[:namespace].camelize}" if options[:namespace] %>
-class <%= "#{app_name.camelize}" %> < Thor::Group
+class <%= app_name.camelize %> < Thor::Group
   include Thor::Actions
 
   # Define arguments and options

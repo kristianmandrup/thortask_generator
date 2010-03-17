@@ -1,4 +1,4 @@
-h1. <%= "#{app_name.camelize}" %>
+h1. <%= app_name.camelize %>
 
 A Thor task to do stuff!
 
