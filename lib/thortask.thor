@@ -9,6 +9,7 @@ class Thortask < Thor::Group
   class_option :namespace, :type => :string, :default => false
   class_option :skip_rspec, :type => :boolean, :default => false
   class_option :skip_cucumber, :type => :boolean, :default => false
+  class_option :skip_signatures, :type => :boolean, :default => false
 
   def self.source_root  
     template_path(__FILE__)    
@@ -43,8 +44,12 @@ class Thortask < Thor::Group
     end
   end
 
-  def create_signature   
-    template 'APP.RUBY.TASK.THOR.signature'       
+  def create_signature
+    return if options[:skip_signatures]             
+    empty_directory '_signatures'               
+    inside '_signatures' do                            
+      template 'APP.RUBY.TASK.THOR.signature', 'APP.RUBY.TASK.THOR.signature'       
+    end
   end
 
   def create_lib
